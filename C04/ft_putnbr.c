@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: perattan <perattan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 16:17:47 by perattan          #+#    #+#             */
-/*   Updated: 2025/07/17 16:17:47 by perattan         ###   ########.fr       */
+/*   Created: 2025/07/17 20:19:14 by perattan          #+#    #+#             */
+/*   Updated: 2025/07/17 20:19:14 by perattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
-int ft_strncmp(char *s1, char *s2, unsigned int n)
+void	ft_putchar(char c)
 {
-    unsigned int i;
-
-    i = 0;
-    while (i < n && s1[i] != '\0' && s2[i] != '\0')
-    {
-        if (s1[i] != s2[i])
-            return (s1[i] - s2[i]);
-        i++;
-    }
-    if (i < n)
-        return (s1[i] - s2[i]);
-    return (0);
+	write(1, &c, 1);
 }
- int	main(void)
- {
- 	char s1[] = "Hello";
- 	char s2[] = "Hellz";
+void	ft_putnbr(int nb)
+{
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = nb * -1;
+	}
+	if (nb >= 0 && nb < 10)
+		ft_putchar(nb + '0');
+	else
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+}
 
- 	printf("%d", ft_strncmp(s1, s2, 5));
- }
+int	main(void)
+{
+	ft_putnbr(4);
+}

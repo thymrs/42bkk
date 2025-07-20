@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 #include <unistd.h>
 
 int	ft_strlen(char *dest)
@@ -25,20 +25,16 @@ int	ft_strlen(char *dest)
 	return (i);
 }
 
-unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	int	i;
-	int	j;
-	int	k;
+	unsigned int	i, j, k;
 
 	i = 0;
 	j = 0;
 
 	k = ft_strlen(dest) + ft_strlen(src);
 	while (dest[i])
-	{
 		i++;
-	}
 	while (src[j])
 	{
 		dest[i + j] = src[j];
@@ -49,7 +45,7 @@ unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
 }
 //int	main(void)
 //{
-//	char str1[] = "hello";
+//	char str1[] = "hellh";
 //	char str2[] = "hi";
 //	unsigned int test = ft_strlcat(str2, str1, 5);
 //	printf("%d", test);
