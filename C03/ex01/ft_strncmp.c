@@ -28,10 +28,10 @@ int ft_strncmp(char *s1, char *s2, unsigned int n)
         return (s1[i] - s2[i]);
     return (0);
 }
- int	main(void)
- {
- 	char s1[] = "Hello";
- 	char s2[] = "Hellz";
+// int	main(void)
+// {
+// 	char s1[] = "Hello";
+// 	char s2[] = "Hellz";
 
- 	printf("%d", ft_strncmp(s1, s2, 5));
- }
+// 	printf("%d", ft_strncmp(s1, s2, 5));
+// }
