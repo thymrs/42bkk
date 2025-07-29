@@ -11,30 +11,6 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
-
-//int	ft_atoi(char *str)
-//{
-//	int	i, count, num;
-
-//	i = 0;
-//	num = 0;
-//	count = 1;
-//	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
-//		i++;
-//	while (str[i] == '-' || str[i] == '+')
-//	{
-//		if (str[i] == '-')
-//			count = count * -1;
-//		i++;
-//	}
-//	while (str[i] >= '0' && str[i] <= '9')
-//	{
-//		num = num * 10 + (str[i] - '0');
-//		i++;
-//	}
-//	return (num * count);
-//}
 
 int	ft_atoi(char *str)
 {

@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: perattan <perattan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 20:19:14 by perattan          #+#    #+#             */
-/*   Updated: 2025/07/17 20:19:14 by perattan         ###   ########.fr       */
+/*   Created: 2025/07/17 19:55:56 by perattan          #+#    #+#             */
+/*   Updated: 2025/07/17 19:55:56 by perattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <unistd.h>
 
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
-}
-void	ft_putnbr(int nb)
-{
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = nb * -1;
-	}
-	if (nb >= 0 && nb < 10)
-		ft_putchar(nb + '0');
-	else
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-}
+	int	i;
 
-int	main(void)
-{
-	ft_putnbr(4);
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
 }
+//int	main(void)
+//{
+//	char str1[] = "Hello";
+//	int	length = ft_strlen(str1);
+//	printf("%d", length);
+//}
